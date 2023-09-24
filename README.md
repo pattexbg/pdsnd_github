@@ -11,8 +11,12 @@ It involves analyzing **bikeshare data** from three major cities: Chicago, New Y
 * Filter options: The script provides options to filter data by month and day of the week, allowing users to focus on specific time periods.
 * Raw data display: Users have the option to view the raw data for individual trips.
 
-## Getting started
-To get started with the bikeshare.py project, make sure you have **Python 3** installed on your machine. 
+## Getting started 
+![Starting Power](http://img.sxsw.com/2014/spg_images/IAP25755.png)
+To get started with the bikeshare.py project, make sure you have **Python 3** installed on your machine.
+
+If you use VSC check VSC python version first and change to equivalent Python version. Use the Python: Select Interpreter (View -> Command Palette).
+
 Clone this repository and run the script using the following command:
 
 ```python bikeshare.py```
