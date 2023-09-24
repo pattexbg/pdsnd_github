@@ -34,7 +34,7 @@ def get_filters():
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     day = input('What is the name of the day to filter data? (E.g. Input either "all" to apply no day filter or Monday, Tuesday, ... Sunday: ').lower()
     while day not in days:
-        day = input('Sorry, day not valid. Please re-enter valid day name (E.g. Input either "all" to apply no day filter or Monday, Tuesday, ... Sunday: ').lower()
+        day = input('Sorry, this is not a valid input. Please re-enter valid day name (E.g. Input either "all" to apply no day filter or Monday, Tuesday, ... Sunday: ').lower()
 
     print('-' * 40)
     return city, month, day
@@ -95,10 +95,11 @@ def time_stats(df):
 
     print('The most common day of week from the given filtered data is:', popular_day)
 
-    # display the most common start hour
-
     # extract hour from the Start Time column to create an hour column
+
     df['hour'] = df['Start Time'].dt.hour
+
+    # display the most common start hour
 
     popular_hour = df['hour'].mode()[0]
 
@@ -178,9 +179,6 @@ def user_stats(df):
         print('\nThe count of user gender from the given filtered data is: ', ct_gender)
     else:
         print('\nGender stats cannot be calculated because Gender does not appear in the dataframe.')
-
-
-
 
     # Display earliest, most recent, and most common year of birth
     if 'Gender' in df:
