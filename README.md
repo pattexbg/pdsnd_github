@@ -13,6 +13,7 @@ It involves analyzing **bikeshare data** from three major cities: Chicago, New Y
 
 ## Getting started 
 ![Starting Power](http://img.sxsw.com/2014/spg_images/IAP25755.png)
+
 To get started with the bikeshare.py project, make sure you have **Python 3** installed on your machine.
 
 If you use VSC check VSC python version first and change to equivalent Python version. Use the Python: Select Interpreter (View -> Command Palette).
