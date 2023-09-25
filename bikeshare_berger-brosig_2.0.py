@@ -31,10 +31,14 @@ def get_filters():
             print('Sorry, the city you entered is not in the list. Please try again.')
 
     # get user input for month (all, january, february, ... , june)
-    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
-    month = input('What is the name of the month to filter data? Use "all" for the entire period from January to June: ').lower()
-    while month not in months:
-        month = input('Sorry, month is not in list, please re-enter valid month: ').lower()
+     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
+
+    while True:
+        month = input('What is the name of the month to filter data? Use "all" for the entire period from January to June: ').lower()
+        if month in months:
+            break
+        else:
+            print('Sorry, the month you entered is not in the list. Please try again.')
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
