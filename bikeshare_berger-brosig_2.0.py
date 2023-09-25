@@ -42,9 +42,13 @@ def get_filters():
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-    day = input('What is the name of the day to filter data? (E.g. Input either "all" to apply no day filter or Monday, Tuesday, ... Sunday: ').lower()
-    while day not in days:
-        day = input('Sorry, day not valid. Please re-enter valid day name (E.g. Input either "all" to apply no day filter or Monday, Tuesday, ... Sunday: ').lower()
+
+    while True:
+        day = input('What is the name of the day to filter data? (E.g. Input either "all" to apply no day filter or Monday, Tuesday, ... Sunday: ').lower()
+        if day in days:
+            break
+        else:
+            print('Sorry, the day you entered is not valid. Please try again.')
 
     print('-' * 40)
     return city, month, day
