@@ -37,3 +37,7 @@ Make sure you have these libraries installed before running the script.
 ## Additional Resources
 
 For more information about the project and its implementation, refer to the project documentation and code available in this repository.
+
+### THANKS
+:purple_heart:
+

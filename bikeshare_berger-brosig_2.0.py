@@ -19,22 +19,36 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = input('What is the name of the city to analyze data? (E.g. Input either Chicago, New York City, Washington): ').lower()
-    while city not in CITY_DATA:
-        city = input('Sorry, city is not in list. Please input either Chicago, New York City or Washington: ').lower()
+    valid_cities = ['chicago', 'new york city', 'washington']
+
+    while True:
+        city = input('What is the name of the city to analyze data? (E.g. Input either Chicago, New York City, Washington): ').lower()
+        if city in valid_cities:
+            break
+        else:
+            print('Sorry, the city you entered is not in the list. Please try again.')
 
     # get user input for month (all, january, february, ... , june)
-    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
-    month = input('What is the name of the month to filter data? Use "all" for the entire period from January to June: ').lower()
-    while month not in months:
-        month = input('Sorry, month is not in list, please re-enter valid month: ').lower()
+     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
+
+    while True:
+        month = input('What is the name of the month to filter data? Use "all" for the entire period from January to June: ').lower()
+        if month in months:
+            break
+        else:
+            print('Sorry, the month you entered is not in the list. Please try again.')
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-    day = input('What is the name of the day to filter data? (E.g. Input either "all" to apply no day filter or Monday, Tuesday, ... Sunday: ').lower()
-    while day not in days:
-        day = input('Sorry, this is not a valid input. Please re-enter valid day name (E.g. Input either "all" to apply no day filter or Monday, Tuesday, ... Sunday: ').lower()
+
+    while True:
+        day = input('What is the name of the day to filter data? (E.g. Input either "all" to apply no day filter or Monday, Tuesday, ... Sunday: ').lower()
+        if day in days:
+            break
+        else:
+            print('Sorry, the day you entered is not valid. Please try again.')
 
     print('-' * 40)
     return city, month, day
